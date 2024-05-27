@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "davauj2",
+      "email": "joe.davault@gmail.com",
+      "name": "Joe Davault"
+    },
+    {
+      "id": "2",
+      "username": "blomme2",
+      "email": "erin.blomme2@gmail.com",
+      "name": "Erin Bloome"
+    },
+    {
+      "id": "3",
+      "username": "depousx",
+      "email": "franco.despoux@gmail.com",
+      "name": "Franco Despoux"
+    }
+  ],
+  "books": [
+    {
+      "id": "1",
+      "title": "The Little Book of Semaphores",
+      "author": "Allen B. Downey "
+    },
+    {
+      "id": "2",
+      "title": "Programming Pearls",
+      "author": "Jon Bentley"
+    },
+    {
+      "id": "3",
+      "title": "The Elements of Programming Style",
+      "author": "Brian W. Kernighan and Phillip J. Plauger"
+    },
+    {
+      "id": "BDUDxb6F",
+      "title": "Harry Potter",
+      "author": "J. K. Rowling"
+    },
+    {
+      "id": "u-oXgnAI",
+      "title": "Batman Returns",
+      "author": "Joe Davault"
+    }
+  ],
+  "posts": [
+    { "thread": 1, "text": "To pass AWS Exams, read AWS Whitepapers", "user": 3 },
+    { "thread": 1, "text": "Do hands-on labs and practice inside the AWS Console", "user": 2 },
+    {
+      "thread": 1,
+      "text": "When it comes ot AWS practice tests, I trust Wizlaabs, their practice testsis often of high qulity and covers example topics nicely",
+      "user": 1
+    }
+  ]
+}

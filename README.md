@@ -38,7 +38,7 @@ Before you begin, ensure you have the following:
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/jdavault01/lab-files-ms-node-js
+   git clone https://github.com/jdavault/lab-files-ms-node-js
    cd your-repo
    ```
 
@@ -85,20 +85,21 @@ Before you begin, ensure you have the following:
 1. Build the Docker image:
 
    ```sh
-   docker build -t your-image-name .
+   docker build -t jdavault/testingecs .
+
    ```
 
 2. Push the image to your container registry (e.g., Docker Hub, AWS ECR):
 
    ```sh
-   docker tag your-image-name:latest your-repo/your-image-name:latest
-   docker push your-repo/your-image-name:latest
+   docker tag testingecs:latest jdavault/testingecs:latest
+   docker push jdavault/testingecs:latest
    ```
 
 3. Update the ECS service to use the new image:
 
    ```sh
-   aws ecs update-service --cluster your-cluster-name --service your-service-name --force-new-deployment
+   aws ecs update-service --cluster mb2-ecs-cluster --service mb2-ecs-service --force-new-deployment
    ```
 
 ## Usage

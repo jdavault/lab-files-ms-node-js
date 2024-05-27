@@ -6,3 +6,4 @@ node_modules
 .env-sample
 docker-compose.yml
 notes.txt
+.DS_Store

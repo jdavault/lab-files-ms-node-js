@@ -92,7 +92,6 @@ Before you begin, ensure you have the following:
 2. Push the image to your container registry (e.g., Docker Hub, AWS ECR):
 
    ```sh
-   docker tag testingecs:latest jdavault/testingecs:latest
    docker push jdavault/testingecs:latest
    ```
 

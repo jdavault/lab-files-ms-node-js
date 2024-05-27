@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000;
 // const __dirname = dirname(fileURLToPath(import.meta.url))
 // const file = join(__dirname, 'db.json')
 
-const adapter = new JSONFile("db.json")
+const adapter = new JSONFile("./config/db.json")
 const defaultData = { books: [] }
 const db = new Low(adapter, defaultData)
 await db.read()

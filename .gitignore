@@ -4,4 +4,5 @@ node_modules
 .env-qa
 .env-prod
 .env-sample
+docker-compose.yml
 notes.txt

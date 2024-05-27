@@ -5,24 +5,29 @@ import cors from "cors";
 import swaggerJsDoc from 'swagger-jsdoc';
 import swaggerUI from 'swagger-ui-express';
 import morgan from 'morgan';
+import connectDB from "./config/db.js";
+// import mongoose from "mongoose";
 
 import { Low } from 'lowdb'
 import { JSONFile } from 'lowdb/node'
 
 import booksRouter from "./routes/books.js"
 import userRouter from "./routes/users.js"
+import notesRouter from "./routes/notes.js"
 
 dotenv.config()
 const PORT = process.env.PORT || 3000;
 
-// const __dirname = dirname(fileURLToPath(import.meta.url))
-// const file = join(__dirname, 'db.json')
+// ---- Connect to MongoDB (notes)
+connectDB();
+// const mongoURL = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_IP}:${process.env.MONGO_PORT}/?authSource=admin`;
+// const mongoURL = `mongodb://localhost:27017/?authSource=admin`;
 
-const adapter = new JSONFile("db.json")
-const defaultData = { books: [] }
+// ----- Connect to MockDB (users and books)
+const adapter = new JSONFile("./config/db.json")
+const defaultData = { books: [], users: [] }
 const db = new Low(adapter, defaultData)
 await db.read()
-
 const app = express();
 app.db = db;
 
@@ -33,6 +38,7 @@ app.use(morgan("dev"))
 
 app.use(booksRouter)
 app.use(userRouter)
+app.use(notesRouter)
 
 const swaggerOptions = {
   swaggerDefinition: {
@@ -68,3 +74,19 @@ app.get("/api", async (req, res) => {
 app.listen(PORT, async () => {
   console.log(`Server is running on http://localhost:${PORT}`)
 });
+
+
+// const conn = await mongoose.connect(process.env.MONGO_URI);
+// mongoose
+//   .connect(mongoURL, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   })
+//   .then(() => {
+//     console.log("succesfully connected to DB");
+//     app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`));
+//   })
+//   .catch((e) => {
+//     console.log(e);
+//     process.exit(1);
+//   });

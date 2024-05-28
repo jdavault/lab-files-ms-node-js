@@ -85,14 +85,15 @@ Before you begin, ensure you have the following:
 1. Build the Docker image:
 
    ```sh
-   docker build -t jdavault/testingecs .
+   docker build -t nodejs-ecs-demo .
+   docker tag nodejs-ecs-demo:latest jdavault/nodejs-ecs-demo:latest
 
    ```
 
 2. Push the image to your container registry (e.g., Docker Hub, AWS ECR):
 
    ```sh
-   docker push jdavault/testingecs:latest
+   docker push jdavault/nodejs-ecs-demo:latest
    ```
 
 3. Update the ECS service to use the new image:

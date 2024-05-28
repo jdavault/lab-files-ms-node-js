@@ -1,0 +1,11 @@
+{
+  "posts": [
+    { "thread": 1, "text": "To pass AWS Exams, read AWS Whitepapers", "user": 3 },
+    { "thread": 1, "text": "Do hands-on labs and practice inside the AWS Console", "user": 2 },
+    {
+      "thread": 1,
+      "text": "When it comes ot AWS practice tests, I trust Wizlaabs, their practice testsis often of high qulity and covers example topics nicely",
+      "user": 1
+    }
+  ]
+}

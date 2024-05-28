@@ -1,12 +1,30 @@
 {
-  "name": "3-containerized-microservice",
+  "name": "3-containerized-ms-users",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.17.1",
+    "helmet": "^7.0.0",
+    "lowdb": "^6.1.1",
+    "mongoose": "^8.4.0",
+    "morgan": "^1.10.0",
+    "nanoid": "^3.1.20",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/lowdb": "^1.0.9",
+    "nodemon": "^3.1.0"
+  }
 }

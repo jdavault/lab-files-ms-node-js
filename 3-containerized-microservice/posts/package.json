@@ -1,5 +1,5 @@
 {
-  "name": "3-containerized-ms-books",
+  "name": "3-containerized-ms-posts",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",

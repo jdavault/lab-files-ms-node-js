@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "davauj2",
+      "email": "joe.davault@gmail.com",
+      "name": "Joe Davault"
+    },
+    {
+      "id": "2",
+      "username": "blomme2",
+      "email": "erin.blomme2@gmail.com",
+      "name": "Erin Bloome"
+    },
+    {
+      "id": "3",
+      "username": "depousx",
+      "email": "franco.despoux@gmail.com",
+      "name": "Franco Despoux"
+    }
+  ]
+}

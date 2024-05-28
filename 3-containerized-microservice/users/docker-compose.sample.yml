@@ -1,0 +1,24 @@
+# @format
+
+version: "3"
+services:
+  api:
+    build: .
+    image: kodekloud/ecs-project2
+    environment:
+      - MONGO_USER=xxxx
+      - MONGO_PASSWORD=xxx
+      - MONGO_IP=xxxx
+      - MONGO_PORT=27017
+    ports:
+      - "3000:3000"
+  mongo:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=xx
+      - MONGO_INITDB_ROOT_PASSWORD=xx
+    volumes:
+      - mongo-db:/data/db
+
+volumes:
+  mongo-data:
